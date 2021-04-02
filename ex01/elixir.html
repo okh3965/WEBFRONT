@@ -3,6 +3,41 @@
   <head>
     <title>Bit Lounge 건강음료</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <style>
+      /* 구조 선택자 : 형제 관계에서의 위치로 요소를 선택 */
+      /* class=menu인 요소의 자식 li 중 첫번째 형제 */
+      .menu > li:first-child {
+        background-color: lightgreen;
+      }
+      /* class=menu인 요소의 자식 li 중 두번째 형제 */
+      .menu > li:nth-child(2) {
+        background-color: lightblue;
+      }
+      /* class=menu인 요소이 자식 li 중 뒤에서 두번째 형제 */
+      .menu > li:nth-last-child(2){
+        background-color: plum;
+      }
+
+      .menu > li:last-child {
+        background-color: pink;
+      }
+      /* class=beverage 요소의 자식 h2*/
+      .beverage > h2 {
+        /*브라우저의 기본 폰트 사이즈는 16px */
+        /* 절대 단위 px: 화면에 표시되는 점 한개 */
+        /*font-size: 24px;*/
+        /*상대 단위 %: 비율 백분율 */
+        /*font-size: 150%;  /*16px의 150% -> 24px*/
+        /*상대 단위 em : 배율 */
+        font-size:1.5em;
+      }
+
+      .beverage > p {
+        font-size: 1.2em; /* 16px의 1.2배 = 120% */
+      }
+
+    </style>
   </head>
   <body>
     <header>
@@ -10,7 +45,7 @@
     </header>
     <nav><!-- nav: 메뉴 등 사이트 네비게이션 관련 시맨틱 태그-->
     <!-- menu -->
-    <ul>
+    <ul class="menu">
       <!-- ul: 순서 없는 리스트 -->
       <!-- ol: 순서 있는 리스트 -->
       <li>Green</li>
@@ -26,37 +61,47 @@
       <img src="./images/Penguins.jpg" alt="Seller" />
     </div>
 
-    <section><!-- section: 내부 섹션을 구분하는 시맨틱 태그-->
-      <h2>Green Tea Cooler</h2>
-      <img src="images/green.jpg" alt="Green Tea Cooler"/>
-      <p>Chock full of vitamins and minerals, 
-        this elixir combines the healthful benefits of green tea 
-        with a twist of chamomile blossoms and ginger root.
-      </p>
+    <section id="green"><!-- section: 내부 섹션을 구분하는 시맨틱 태그-->
+      <!-- 클래스는 여러 요소가 가질 수 있고, 
+        한 요소가 여러 클래스를 가질 수 있다.-->
+      <div class="green beverage">
+        <h2>Green Tea Cooler</h2>
+        <img src="images/green.jpg" alt="Green Tea Cooler"/>
+        <p>Chock full of vitamins and minerals, 
+          this elixir combines the healthful benefits of green tea 
+          with a twist of chamomile blossoms and ginger root.
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2>Raspberry Ice Concentration</h2>
-      <img src="images/lightblue.jpg" alt="Raspberry Ice Concentration"/>
-      <p>Combining raspberry juice with lemon grass, 
-        citrus peel and rosehips, this icy drink will make your mind feel clear and crisp.
-      </p>
+    <section id="blue">
+      <div class="beverage blue">
+        <h2>Raspberry Ice Concentration</h2>
+        <img src="images/lightblue.jpg" alt="Raspberry Ice Concentration"/>
+        <p>Combining raspberry juice with lemon grass, 
+          citrus peel and rosehips, this icy drink will make your mind feel clear and crisp.
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2>Blueberry Bliss Elixir</h2>
-      <img src="images/blue.jpg" alt="Blueberry Bliss Elixir"/>
-      <p>Blueberries and cherry essence mixed into 
-        a base of elderflower herb tea will put you 
-        in a relaxed state of bliss in no time.
-      </p>
+    <section id="purple">
+      <div class="beverage purple">
+        <h2>Blueberry Bliss Elixir</h2>
+        <img src="images/blue.jpg" alt="Blueberry Bliss Elixir"/>
+        <p>Blueberries and cherry essence mixed into 
+          a base of elderflower herb tea will put you 
+          in a relaxed state of bliss in no time.
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2>Cranberry Antioxidant Blast</h2>
-      <img src="images/red.jpg" alt="Cranberry Antioxidant Blast"/>
-      <p>Wake up to the flavors of cranberry and hibiscus in this vitamin C rich elixir.
-      </p>
+    <section id="red">
+      <div class="beverage red">
+        <h2>Cranberry Antioxidant Blast</h2>
+        <img src="images/red.jpg" alt="Cranberry Antioxidant Blast"/>
+        <p>Wake up to the flavors of cranberry and hibiscus in this vitamin C rich elixir.
+        </p>
+      </div>
     </section>
 
   </article>
