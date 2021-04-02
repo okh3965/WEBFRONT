@@ -22,19 +22,27 @@ nav, section {
 }
 
 .beverage.green {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
+    /* background-color: rgba(0, 255, 0, 0.1); */
+    background-color: #00FF0020;
 }
 
 .beverage.blue {
-    background-color: cyan;
+    /* background-color: cyan; */
+    /* background-color: rgba(0, 0, 255, 0.1); */
+    background-color: #0000FF20;
 }
 
 .beverage.purple {
-    background-color: violet;
+    /* background-color: violet; */
+    /* background-color: rgba(127, 0, 127, 0.1); */
+    background-color: #7F007F20;
 }
 
 .beverage.red {
-    background-color: red;
+    /* background-color: red; */
+    /* background-color: rgba(255, 0, 0, 0.1); */
+    background-color: #FF000020;
 }
 
 /* 가상선택자 (반응 선택자)
@@ -54,4 +62,19 @@ a:link { /*미방문 상태의 링크 */
 
 a:visited { /*기방문 링크*/
     color:blue;
+}
+
+body {
+    /* 배경화면 속성 */
+    background-image: url("../images/Landscape.jpg");
+    background-repeat: no-repeat; /*반복하지 않음*/
+    /* background-repeat: repeat-y; y축 방향으로만 반복 */
+    background-attachment: fixed; /*fixed: 배경화면 고정 */
+    background-position: bottom; /*배경화면 위치*/
+    background-size: 100%;
+
+    /*축약형
+    이미지 position / size 반복여부 부착방식 색상*/
+    background: url("../images/Landscape.jpg") bottom / 100% 20%
+        no-repeat fixed lightgray;
 }
